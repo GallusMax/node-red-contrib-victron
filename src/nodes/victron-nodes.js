@@ -96,6 +96,7 @@ module.exports = function (RED) {
     RED.nodes.registerType('victron-input-motordrive', BaseInputNode);
     RED.nodes.registerType('victron-input-multi', BaseInputNode);
     RED.nodes.registerType('victron-input-pulsemeter', BaseInputNode);
+    RED.nodes.registerType('victron-input-pump', BaseInputNode);
     RED.nodes.registerType('victron-input-pvinverter', BaseInputNode);
     RED.nodes.registerType('victron-input-relay', BaseInputNode);
     RED.nodes.registerType('victron-input-settings', BaseInputNode);
@@ -113,6 +114,7 @@ module.exports = function (RED) {
     RED.nodes.registerType('victron-output-generator', BaseOutputNode);
     RED.nodes.registerType('victron-output-inverter', BaseOutputNode);
     RED.nodes.registerType('victron-output-multi', BaseOutputNode);
+    RED.nodes.registerType('victron-output-pump', BaseOutputNode);
     RED.nodes.registerType('victron-output-pvinverter', BaseOutputNode);
     RED.nodes.registerType('victron-output-relay', BaseOutputNode);
     RED.nodes.registerType('victron-output-settings', BaseOutputNode);

@@ -3199,6 +3199,20 @@
       }
     ]
   },
+  "input-pump": {
+    "help": "<p>Node for a sensor controlled pump, connected to one of the relays. </p>",
+    "pump": [
+      {
+        "path": "/State",
+        "type": "enum",
+        "name": "Pump State",
+        "enum": {
+          "0": "Stopped",
+          "1": "Running"
+        }
+      }
+    ]
+  },
   "input-pvinverter": {
     "help": "<p>This node is for obtaining information from the PV inverter.</p>",
     "pvinverter": [
@@ -5140,6 +5154,34 @@
           "3": "On",
           "4": "Off"
         },
+        "writable": true
+      }
+    ]
+  },
+  "output-pump": {
+    "help": "<p>This node is for controlling a pump.</p>",
+    "settings": [
+      {
+        "path": "/Settings/Pump0/Mode",
+        "type": "enum",
+        "name": "Mode",
+        "enum": {
+          "0": "Auto",
+          "1": "On",
+          "2": "Off"
+        },
+        "writable": true
+      },
+      {
+        "path": "/Settings/Pump0/StartValue",
+        "type": "integer",
+        "name": "Start value (%)",
+        "writable": true
+      },
+      {
+        "path": "/Settings/Pump0/StopValue",
+        "type": "integer",
+        "name": "Stop value (%)",
         "writable": true
       }
     ]
