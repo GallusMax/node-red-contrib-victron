@@ -95,7 +95,8 @@
         var nodeLabelLower = nodeLabel.toLowerCase();
 
         var buildOption = function buildOption(service) {
-            return $('<option/>').val(service.service || service.path).text(service.name).data(service);
+            var name = service.deviceInstance ? service.name + ' (' + service.deviceInstance + ')' : service.name
+            return $('<option/>').val(service.service || service.path).text(name).data(service);
         };
 
         var populateSelect = function populateSelect(selector, services) {
