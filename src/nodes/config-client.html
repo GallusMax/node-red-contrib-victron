@@ -5,6 +5,16 @@
 </style>
 
 <script type="text/x-red" data-template-name="victron-client">
+  <div class="form-row">
+    The custom input node allows you to read directly from the dbus. It can only be
+    selected if the checkbox is checked.
+  </div>
+
+  <div class="form-row">
+    <label style="min-width:190px" for="node-config-input-custominput"><i class="fa fa-cog"></i> Custom input node</label>
+    <input type="checkbox" id="node-config-input-custominput" style="max-width:30px">
+</div>
+
 </script>
 
 <script type="text/x-red" data-help-name="victron-client">
@@ -48,17 +58,19 @@ Questions can also be asked on the Victron Energy community:
     RED.nodes.registerType('victron-client', {
         category: 'config',
         color: '#a6bbcf',
-        defaults: {},
+        defaults: {
+          custominput: {value: true}
+        },
         label: function label() {
             return "Victron Energy Client";
         },
-        hasUsers: false,
         onpaletteremove: function onpaletteremove() {
             RED.nodes.eachConfig(function (n) {
                 if (n.id === 'victron-client') RED.nodes.remove(n.id);
             });
             RED.nodes.dirty(true);
         }
+
         
     });
 </script>

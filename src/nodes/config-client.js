@@ -43,6 +43,8 @@ module.exports = function (RED) {
   function ConfigVictronClient (config) {
     RED.nodes.createNode(this, config)
 
+    this.custominput = config.custominput;
+    
     this.client = globalClient
     let statusListeners = []
 
